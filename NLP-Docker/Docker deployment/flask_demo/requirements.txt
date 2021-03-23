@@ -1,0 +1,8 @@
+flask
+flasgger
+numpy
+pandas
+matplotlib
+nltk
+spacy
+wordcloud

@@ -1,0 +1,7 @@
+## COMANDI DA AGGIUNGERE A /etc/hadoop/hadoop-env.sh
+
+# Comando esportazione delle librerie
+export HADOOP_CLASSPATH=/home/bigdata/hadoop-2.7.4/Comuni-Italia-Project/libraries/mongodb-driver3.5.0.jar:/home/bigdata/hadoop-2.7.4/Comuni-ItaliaProject/libraries/mongo-hadoop-core-1.5.1.jar:/home/bigdata/hadoop-2.7.4/Comuni-Italia-Project/libraries/mongodb-driver-core-3.5.0.jar:/home/bigdata/hadoop-2.7.4/Comuni-Italia-Project/libraries/bson-3.5.0.jar:$HADOOP_CLASSPATH
+
+# Impostazione del log a ERROR
+HADOOP_ROOT_LOGGER="ERROR,console"

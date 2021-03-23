@@ -1,0 +1,42 @@
+
+     ******************************
+     ** DATABASE COMUNI D'ITALIA **
+     ******************************
+
+Questo software offre degli strumenti di gestione per il database comuni.json, contenente informazioni sui comuni italiani. Gli elementi sono in formato JSON, alcuni campo contengono documenti embedded, es:
+
+{
+	"_id" : ObjectId("5a2eb0b4c87dcd3b44fec396"),
+	"nome" : "Abbadia Cerreto",
+	"codice" : "098001",
+	"zona" : {
+		"nome" : "Nord-ovest",
+		"codice" : "1"
+	},
+	"regione" : {
+		"codice" : "03",
+		"nome" : "Lombardia"
+	},
+	"cm" : {
+		"codice" : "",
+		"nome" : ""
+	},
+
+	...
+}
+
+Le operazioni eseguibili attraverso questo software:
+ 1-- find: Permette di ottenere specifici elementi che rispondono alle condizioni: 
+           <key> <value>
+           per accedere a una chiave di un documento embedded bisogna usare la sintassi: 
+           <key.subkey> <value>
+
+ 2-- aggregate: Permette di eseguire un'operazione di aggregatione, e di visualizzare il risultato, il parametro:
+                <aggregation_term>
+                è il termine rispetto al quale viene applicata l'aggregazione. Usare la sintassi 
+                <key_condition> <value_condition> <aggregation_term>
+                in caso sia presente una condizione sugli elmenti da aggregare. Usare la sintassi <key:subkey> per accedere una sottochiave
+               
+ 3-- log: restituisce il contenuto del file di log, dove sono registrate le operazioni che sono state eseguite sul database
+
+ 4-- help
